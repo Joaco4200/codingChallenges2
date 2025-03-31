@@ -9,6 +9,8 @@ public class Program {
 		
 		String sentencee= "Hola buenos dias saludos";
 		System.out.println(WordsCounter.vowelsandconsonantsCounter(sentencee));
+		
+		String sentenceee= "Hola buenos dias saludos";
+		System.out.println(WordsCounter.wordswithxLarge(sentenceee, 6));
 	}
-	
 }

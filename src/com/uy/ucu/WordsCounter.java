@@ -23,8 +23,9 @@ public class WordsCounter {
 		int vowelCounter= 0;
 		int consonantCounter= 0;
 		String vowels= "aeiouAEIOU";
+		char[] letters= sentence.toCharArray();
 		
-		for(char c: sentence.toCharArray()) {
+		for(char c: letters) {
 			if(Character.isLetter(c)) {
 				if(vowels.indexOf(c) != -1) {
 					vowelCounter++;
@@ -37,5 +38,19 @@ public class WordsCounter {
 		
 		return "Vowels:" + vowelCounter + " " + "Consonant:" + consonantCounter;
 	}
+	
+	public static String wordswithxLarge(String sentence, int large) {
+		
+		int wordsCounter= 0;
+		String[] words= sentence.split(" ");
+		for(String c: words) {
+			if(c.length() >= large) {
+				wordsCounter++;
+			}
+		}
+		
+		return "Words:" + wordsCounter;
+	}
+	
 }
 
