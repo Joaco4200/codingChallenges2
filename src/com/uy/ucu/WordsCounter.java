@@ -25,15 +25,17 @@ public class WordsCounter {
 		String vowels= "aeiouAEIOU";
 		
 		for(char c: sentence.toCharArray()) {
-			if(vowels.indexOf(c) != -1) {
-				vowelCounter++;
-			}
-			else {
-				consonantCounter++;
+			if(Character.isLetter(c)) {
+				if(vowels.indexOf(c) != -1) {
+					vowelCounter++;
+				}
+				else {
+					consonantCounter++;
+				}
 			}
 		}
 		
-		return 
+		return "Vowels:" + vowelCounter + " " + "Consonant:" + consonantCounter;
 	}
 }
 
