@@ -23,9 +23,9 @@ public class WordsCounter {
 		int vowelCounter= 0;
 		int consonantCounter= 0;
 		String vowels= "aeiouAEIOU";
-		char[] letters= sentence.toCharArray();
+		//char[] letters= sentence.toCharArray();
 		
-		for(char c: letters) {
+		for(char c: sentence.toCharArray()) {
 			if(Character.isLetter(c)) {
 				if(vowels.indexOf(c) != -1) {
 					vowelCounter++;
@@ -48,9 +48,9 @@ public class WordsCounter {
 				wordsCounter++;
 			}
 		}
-		
 		return "Words:" + wordsCounter;
 	}
 	
 }
+
 
