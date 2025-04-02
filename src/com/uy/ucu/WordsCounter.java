@@ -1,12 +1,10 @@
 package com.uy.ucu;
-
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-
-//Desarrollo un metodo que cuente la cantidad de palabras dentro de una oracion, declaro un entero como contador, y un bucle for (que inicio en el indice 1 y lo finalizo en -1, para evitar que caracteres al principio o final de la oracion se cuente como una palabra, y dentro del bucleo cheque si encuentra un caracter que no es una letra sumo una palabra al contador
 
 public class WordsCounter {
 	
@@ -57,15 +55,18 @@ public class WordsCounter {
 		return "Words:" + wordsCounter;
 	}
 	
-	public ArrayList<String> getLines(String file) {
+	public static ArrayList<String> getfileLines(String file) {
 		
 		ArrayList<String> output = new ArrayList();
+		int counter= 0;
+		
 		try {
 			BufferedReader br= new BufferedReader(new FileReader(file));
 			String lineaActual= br.readLine();
 				
 			while(lineaActual != null) {
 				output.add(lineaActual);
+				counter++;
 				lineaActual= br.readLine();
 			}
 			
@@ -75,7 +76,18 @@ public class WordsCounter {
             System.out.println("Error reading file: " + e.getMessage());
         }
 		
+		output.add("Lines:"+ counter);
 		return output;
+	}
+	
+	public static String filewordsCounter(ArrayList<String> fileLines) {
+		int counter=0;
+		for(String line: fileLines) {
+			String[] words = line.trim().split("\\s+");
+	        counter += words.length;
+		}
+		
+		return "File words:" + counter;
 	}
 	
 }
