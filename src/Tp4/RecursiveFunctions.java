@@ -1,5 +1,7 @@
 package Tp4;
 
+import java.util.ArrayList;
+
 public class RecursiveFunctions {
 	
 //Determine recursivamente si un número dado es par o impar, usando sólo la operación resta.
@@ -19,7 +21,7 @@ public class RecursiveFunctions {
 
 //Construir un algoritmo recursivo que permita determinar si los dígitos de un numero dado son todos pares.
 	
-	public static boolean evenNumbers(int n) {
+	public static boolean evenDigits(int n) {
 		
 		if(n%2 != 0) {
 			return false;
@@ -29,7 +31,33 @@ public class RecursiveFunctions {
 		}
 		
 		else {
-			return evenNumbers(n/10);
+			return evenDigits(n/10);
 		}
+	}
+	
+//Suma de los dígitos de un número: Escribe un método recursivo que calcule la suma de los dígitos de un número entero. El método debe aceptar un solo parámetro: el número entero del cual se calculará la suma de los dígitos.
+
+	public static int sumDigits(int n) {
+		
+		n= Math.abs(n);
+		
+		if(n<10) {
+			return n;
+		}
+		else {
+			return (n%10) + sumDigits(n/10);
+		}
+	}
+	
+//Impresión de una cadena en orden inverso: Escribe un método recursivo que imprima una cadena dada en orden inverso. El método debe aceptar un solo parámetro: la cadena que se imprimirá en orden inverso.
+
+	public static String stringReverse(String sentence) {
+		
+		if(sentence.length() == 0){
+			return sentence;
+		}
+		else {
+			return sentence.substring(sentence.length()-1) + stringReverse(sentence.substring(0,sentence.length()-1));
+		}	
 	}
 }
