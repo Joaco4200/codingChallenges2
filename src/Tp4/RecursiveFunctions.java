@@ -16,4 +16,20 @@ public class RecursiveFunctions {
 			return itsevenorOdd(n-2);
 		}
 	}
+
+//Construir un algoritmo recursivo que permita determinar si los dígitos de un numero dado son todos pares.
+	
+	public static boolean evenNumbers(int n) {
+		
+		if(n%2 != 0) {
+			return false;
+		}
+		else if(n<=0 & n%2 == 0) {
+			return true;
+		}
+		
+		else {
+			return evenNumbers(n/10);
+		}
+	}
 }
