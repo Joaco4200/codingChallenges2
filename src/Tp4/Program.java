@@ -14,5 +14,7 @@ public class Program {
 		System.out.println(RecursiveFunctions.factorial(5));
 		System.out.println(RecursiveFunctions.sumNaturals(5));
 		System.out.println(RecursiveFunctions.numString(5));
+		System.out.println(RecursiveFunctions.sumbinaryDigits("101011"));
+		RecursiveFunctions.permutations("abc", "");
 	}	
 }

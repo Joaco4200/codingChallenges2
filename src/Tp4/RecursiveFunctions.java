@@ -93,5 +93,32 @@ public class RecursiveFunctions {
 			return numString(n-1) + String.valueOf(n);
 		}
 	}
+
+//Cálculo de la suma de los dígitos de un número binario: Escribe un método recursivo que calcule la suma de los dígitos de un número binario.
+
+	public static int sumbinaryDigits(String binarystring) {
+		if(binarystring.length()==0) {
+			return 0;
+		}
+		else{
+			int lastdigit= Integer.parseInt(""+binarystring.charAt(binarystring.length()-1));
+			return lastdigit + sumbinaryDigits(binarystring.substring(0,binarystring.length()-1));
+		}
+	}
+
+//Generación de todas las permutaciones de una cadena: Escribe un método recursivo que genere todas las permutaciones de los caracteres de una cadena dada. Por ejemplo, las permutaciones de la cadena "abc" son "abc", "acb", "bac", "bca", "cab" y "cba".
+
+	public static void permutations(String sentence, String permutation) {
+		if(sentence.length()==0) {
+			System.out.println(permutation);
+		}
+		else {
+			for(int i=0; i<sentence.length(); i++) {
+				char c= sentence.charAt(i);
+				String next= sentence.substring(0,i) + sentence.substring(i+1);
+				permutations(next,permutation + c);
+			}
+		}
+	}
 }
 	
