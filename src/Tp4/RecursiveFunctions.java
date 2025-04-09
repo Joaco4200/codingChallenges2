@@ -68,7 +68,29 @@ public class RecursiveFunctions {
 			return n;
 		}
 		else {
-			return (n) * factorial(n-1);
+			return n * factorial(n-1);
+		}
+	}
+
+//Cálculo de la suma de los primeros n números naturales: Escribe un método recursivo que calcule la suma de los primeros n números naturales.
+
+	public static int sumNaturals(int n) {
+		if(n==1) {
+			return n;
+		}
+		else {
+			return n + sumNaturals(n-1);
+		}
+	}
+
+//Impresión de números naturales en orden ascendente: Escribe un método recursivo que imprima todos los números naturales desde 1 hasta n en orden ascendente.
+	
+	public static String numString(int n) {
+		if(n==1) {
+			return String.valueOf(n);
+		}
+		else {
+			return numString(n-1) + String.valueOf(n);
 		}
 	}
 }
