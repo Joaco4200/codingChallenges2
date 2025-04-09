@@ -10,10 +10,8 @@ public class Program {
 		System.out.println(RecursiveFunctions.itsevenorOdd(num));
 		System.out.println(RecursiveFunctions.evenDigits(num));
 		System.out.println(RecursiveFunctions.sumDigits(num));
-		
-		
-		String sentence= "Helloooo";
-		System.out.println(RecursiveFunctions.stringReverse(sentence));
+		System.out.println(RecursiveFunctions.stringReverse("Hellooo"));
+		System.out.println(RecursiveFunctions.factorial(5));
 		
 	}	
 }

@@ -45,7 +45,7 @@ public class RecursiveFunctions {
 			return n;
 		}
 		else {
-			return (n%10) + sumDigits(n/10);
+			return n%10 + sumDigits(n/10);
 		}
 	}
 	
@@ -60,4 +60,16 @@ public class RecursiveFunctions {
 			return sentence.substring(sentence.length()-1) + stringReverse(sentence.substring(0,sentence.length()-1));
 		}	
 	}
+	
+//Cálculo del factorial de un número: Escribe un método recursivo que calcule el factorial de un número entero.
+	
+	public static int factorial(int n) {
+		if(n==1) {
+			return n;
+		}
+		else {
+			return (n) * factorial(n-1);
+		}
+	}
 }
+	
