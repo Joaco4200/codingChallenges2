@@ -16,7 +16,7 @@ public class RecursiveFunctionsDaC {
 	public static int sumbinaryDigits(String binarystring) {
 		
 		if (binarystring.length() == 1)
-            return binarystring.charAt(0) - '0';
+            return binarystring.charAt(0) - '0'; //convierto a entero usando valores ASCII
 		else {
 			int mid= binarystring.length()/2;
 			return sumbinaryDigits(binarystring.substring(0,mid)) + sumbinaryDigits(binarystring.substring(mid));
