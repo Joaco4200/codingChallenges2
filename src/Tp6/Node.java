@@ -8,35 +8,35 @@ package Tp6;
  *
  * @author User
  */
-public class Nodo {
+public class Node {
 
     // Variable en la cual se va a guardar el valor.
-    private int valor;
+    private int value;
     // Variable para enlazar los nodos.
-    private Nodo siguiente;
+    private Node next;
 
     /**
      * Constructor que inicializamos el valor de las variables.
      */
-    public void Nodo() {
-        this.valor = 0;
-        this.siguiente = null;
+    public void Node() {
+        this.value = 0;
+        this.next = null;
     }
 
     // Métodos get y set para los atributos.
-    public int getValor() {
-        return valor;
+    public int getValue() {
+        return value;
     }
 
-    public void setValor(int valor) {
-        this.valor = valor;
+    public void setValue(int value) {
+        this.value = value;
     }
 
-    public Nodo getSiguiente() {
-        return siguiente;
+    public Node getNext() {
+        return next;
     }
 
-    public void setSiguiente(Nodo siguiente) {
-        this.siguiente = siguiente;
+    public void setNext(Node next) {
+        this.next = next;
     }
 }
