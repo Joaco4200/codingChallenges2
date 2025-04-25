@@ -20,7 +20,11 @@ public class NodeExercises {
 	}
 
 //Crear un método que devuelva una nueva lista con los mismos elementos que la lista original, en el mismo orden.
-	
+
+	public static List cloneList(Node node) {
+		
+		
+	}
 //Crear un método que genere una nueva lista con los mismos valores pero en orden inverso.
 
 //Crear un método que sume los valores de los nodos ubicados en posiciones pares (0, 2, 4, ...). 
