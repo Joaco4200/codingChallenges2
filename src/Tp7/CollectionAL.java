@@ -1,5 +1,35 @@
 package Tp7;
 
-public class CollectionAL {
+import java.util.ArrayList;
 
+public class CollectionAL {
+	
+//1. Agregar 10 números enteros a una ArrayList y mostrar solo los pares.
+	
+	public static ArrayList<Integer >showPairs(ArrayList<Integer> nums) {
+		ArrayList <Integer> pairsList= new ArrayList<>();
+		
+		for(int c: nums) {
+			if(c%2 == 0) {
+				pairsList.add(c);
+			}
+		}
+		return pairsList;
+	}
+//2. Leer una lista de nombres e imprimirlos en orden inverso.
+	
+	public static void reverseNames(ArrayList<String> names){
+		System.out.println((ArrayList<String>) names.reversed()); //casteo de List a ARRAYlist
+	}
+//3. Eliminar todos los elementos mayores a 50 de una ArrayList de enteros.
+	
+	public static void deletehighNums(ArrayList<Integer> nums) {
+		for(int c:nums) {
+			if(c>50) {
+				nums.remove(c);
+			}
+		}
+	}
+//4. Crear una ArrayList de strings y verificar si contiene una palabra específica.
+//5. Sumar todos los elementos de una ArrayList de números flotantes.
 }
