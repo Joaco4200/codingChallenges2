@@ -24,12 +24,10 @@ public class CollectionAL {
 //3. Eliminar todos los elementos mayores a 50 de una ArrayList de enteros.
 	
 	public static void deletehighNums(ArrayList<Integer> nums) {
-		for(int c:nums) {
-			if(c>50) {
-				nums.remove(c);
-			}
-		}
+		nums.removeIf(n -> n>50);
+		System.out.println(nums);
 	}
 //4. Crear una ArrayList de strings y verificar si contiene una palabra específica.
 //5. Sumar todos los elementos de una ArrayList de números flotantes.
+
 }
