@@ -1,8 +1,8 @@
-package Tp7;
+package Tp7.Collections;
 
 import java.util.Stack;
 
-public class CollectionS {
+public class Stacks {
 //1. Simular una pila de platos: apilar y desapilar varios elementos.
 	public static void Plates(){
 		

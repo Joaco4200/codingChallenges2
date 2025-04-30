@@ -1,8 +1,8 @@
-package Tp7;
+package Tp7.Collections;
 
 import java.util.ArrayList;
 
-public class CollectionAL {
+public class ArrayLists {
 	
 //1. Agregar 10 números enteros a una ArrayList y mostrar solo los pares.
 	
@@ -27,6 +27,7 @@ public class CollectionAL {
 		nums.removeIf(n -> n>50);
 		System.out.println(nums);
 	}
+	
 //4. Crear una ArrayList de strings y verificar si contiene una palabra específica.
 //5. Sumar todos los elementos de una ArrayList de números flotantes.
 
