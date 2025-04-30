@@ -16,5 +16,49 @@ public class Stacks {
 			plates.pop();		}
 	}
 
-//
+//2.Invertir una palabra utilizando una pila.
+	
+	public static String reverseWord(String word) {
+		
+		Stack<Character> pila= new Stack<>();
+		
+		for(char c:word.toCharArray()) {
+			pila.push(c);
+		}
+		
+		StringBuilder reversedword= new StringBuilder();
+		while(!pila.isEmpty()) {
+			reversedword.append(pila.pop());
+		}
+		
+		return reversedword.toString();
+	}
+	
+	
+//3. Implementar una función que copie una pila sin modificar la original.
+	
+	public static <T> Stack<T> copyStack(Stack <T> originalStack) {
+		Stack<T> copy= new Stack<>();
+		for(T t: originalStack) {
+			copy.push(t);
+		}
+		return copy;
+	}
+	
+//4. Contar cuántos elementos hay en una pila sin usar size().
+	
+	public static <T> int countElements(Stack<T> stack){
+		Stack<T> copy= new Stack<>();
+		int counter=0;
+		
+		while(!stack.isEmpty()) {
+			copy.push(stack.pop());
+			counter++;
+		}
+		
+		while(!copy.isEmpty()) {
+			stack.push(copy.pop());
+		}
+		return counter;
+	}
 }
