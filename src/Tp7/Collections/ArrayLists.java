@@ -16,11 +16,13 @@ public class ArrayLists {
 		}
 		return pairsList;
 	}
+	
 //2. Leer una lista de nombres e imprimirlos en orden inverso.
 	
 	public static void reverseNames(ArrayList<String> names){
 		System.out.println((ArrayList<String>) names.reversed()); //casteo de List a ARRAYlist
 	}
+	
 //3. Eliminar todos los elementos mayores a 50 de una ArrayList de enteros.
 	
 	public static void deletehighNums(ArrayList<Integer> nums) {
@@ -29,6 +31,24 @@ public class ArrayLists {
 	}
 	
 //4. Crear una ArrayList de strings y verificar si contiene una palabra específica.
+	
+	public static boolean existingWord(ArrayList<String> words, String word) {
+		for(String s:words) {
+			if(s==word) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
 //5. Sumar todos los elementos de una ArrayList de números flotantes.
+	
+	public static float sumElements(ArrayList<Float> nums) {
+		float result=0;
+		for(Float n:nums) {
+			result+=n;
+		}
+		return result;
+	}
 
 }
