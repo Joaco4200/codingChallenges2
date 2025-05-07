@@ -51,4 +51,27 @@ public class ArrayLists {
 		return result;
 	}
 
+
+
+
+	public static int sumevenNums(ArrayList <Integer> list) {
+		int counter= 0;
+		for(int c:list) {
+			if(c%2==0) {
+				counter+=c;
+			}
+		}
+		return counter;
+	}
+	
+	public static ArrayList<String> norepeateStrings(ArrayList <String> array){
+		ArrayList<String> newArray = new ArrayList<>();
+		
+		for(String s:array) {
+			if(!newArray.contains(s)) {
+				newArray.add(s);
+			}
+		}
+		return newArray;
+	}
 }
