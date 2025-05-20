@@ -4,6 +4,27 @@ import java.util.Arrays;
 
 public class Challenges {
 
+//Create a function which replaces all the x's in the string in the following ways: Replace all x's with "cks" UNLESS: The word begins with "x", therefore replace it with "z", The word is just the letter "x", therefore replace it with "ecks".
+
+	public static String xPronunce(String sentence) {
+		
+		StringBuilder stringBuilder= new StringBuilder();
+		String[] words = sentence.split(" ");
+		for(String w: words) {
+			if(w.equals("x")) {
+				stringBuilder.append("ecks");
+				stringBuilder.append(" ");
+			}else if(w.charAt(0) == 'x') {
+				stringBuilder.append('z' + w.substring(1));
+				stringBuilder.append(" ");
+			}else {
+				stringBuilder.append(w.replace("x", "cks"));
+				stringBuilder.append(" ");
+			}
+		}
+		return stringBuilder.toString();
+		
+	}
 // You have a pack of 5 randomly numbered cards, which can range from 0-9. You can win if you can produce a higher two-digit number from your cards than your opponent. Return true if your cards win that round.
 	
 	public static boolean winRound(int[] you, int[] opp) {

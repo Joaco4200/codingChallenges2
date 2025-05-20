@@ -1,4 +1,4 @@
-package Tp7.Collections;
+package Collections;
 
 import java.util.ArrayList;
 
@@ -50,9 +50,6 @@ public class ArrayLists {
 		}
 		return result;
 	}
-
-
-
 
 	public static int sumevenNums(ArrayList <Integer> list) {
 		int counter= 0;

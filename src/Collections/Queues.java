@@ -1,4 +1,4 @@
-package Tp7.Collections;
+package Collections;
 
 import java.util.LinkedList;
 import java.util.Queue;
