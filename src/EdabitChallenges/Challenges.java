@@ -7,8 +7,6 @@ public class Challenges {
 // You have a pack of 5 randomly numbered cards, which can range from 0-9. You can win if you can produce a higher two-digit number from your cards than your opponent. Return true if your cards win that round.
 	
 	public static boolean winRound(int[] you, int[] opp) {
-		int youbig= 0;
-		int oppbig=0;
 		Arrays.sort(you);
 		Arrays.sort(opp);
 		
