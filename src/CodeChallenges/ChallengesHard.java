@@ -8,18 +8,20 @@ public class ChallengesHard {
 	
 	 public static String actualMemorySize(String ms) {
 		 ArrayList<Integer> nums= new ArrayList<>();
-		 for (int n: ms.toCharArray()) {
+		 for (char n: ms.toCharArray()) {
 			 if(Character.isDigit(n)){
-				 nums.add(n);
+				 nums.add(Character.getNumericValue(n));
 			 }
 		 }
+		 
 		 StringBuilder stringBuilder= new StringBuilder();
-		 for(int n: nums) {
-			 stringBuilder.append(n);
+		 for(Integer n: nums) {
+				 stringBuilder.append(n); 
 		 }
 		 
-		 long value= Long.parseLong(stringBuilder.toString());
-		 long finalvalue= value * (7/100);
+		 double value= Integer.parseInt(stringBuilder.toString());
+		 double porcent= (7 * value) /100;
+		 double finalvalue= value - porcent;
 		 
 		 if(ms.contains("G")) {
 			 return finalvalue+ "GB";
