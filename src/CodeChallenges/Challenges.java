@@ -4,6 +4,23 @@ import java.util.Arrays;
 
 public class Challenges {
 
+//Create a function that will test if a string is a valid PIN or not via a regular expression. Exactly 4 or 6 characters. Only numeric characters (0-9). No whitespace.
+	
+	public static boolean validate(String pin) {
+		int counter= 0;
+		for(char c:pin.toCharArray()) {
+			if(!Character.isDigit(c)) {
+				return false;
+			}
+			counter++;
+		}
+		if(counter == 4 | counter==6) {
+			return true;
+		}else {
+			return false;
+		}
+	}
+
 //Create a function which replaces all the x's in the string in the following ways: Replace all x's with "cks" UNLESS: The word begins with "x", therefore replace it with "z", The word is just the letter "x", therefore replace it with "ecks".
 
 	public static String xPronunce(String sentence) {
