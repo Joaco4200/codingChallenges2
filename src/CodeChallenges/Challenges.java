@@ -1,4 +1,4 @@
-package EdabitChallenges;
+package CodeChallenges;
 
 import java.util.Arrays;
 
@@ -25,6 +25,7 @@ public class Challenges {
 		return stringBuilder.toString();
 		
 	}
+	
 // You have a pack of 5 randomly numbered cards, which can range from 0-9. You can win if you can produce a higher two-digit number from your cards than your opponent. Return true if your cards win that round.
 	
 	public static boolean winRound(int[] you, int[] opp) {
@@ -36,8 +37,6 @@ public class Challenges {
 		}
 		return false;
 	}
-	
-	
 	
 //A number is said to be Harshad if it's exactly divisible by the sum of its digits. Create a function that determines whether a number is a Harshad or not.
 	
