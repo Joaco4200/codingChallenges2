@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 public class Challenges {
 
+	//
 //Create a function that will test if a string is a valid PIN or not via a regular expression. Exactly 4 or 6 characters. Only numeric characters (0-9). No whitespace.
 	
 	public static boolean validate(String pin) {
@@ -53,6 +54,12 @@ public class Challenges {
 			return true;
 		}
 		return false;
+	}
+	
+//Create a function that finds how many prime numbers there are, up to the given integer.
+	
+	public static int 	primeNumbers(int num) {
+		for()
 	}
 	
 //A number is said to be Harshad if it's exactly divisible by the sum of its digits. Create a function that determines whether a number is a Harshad or not.
