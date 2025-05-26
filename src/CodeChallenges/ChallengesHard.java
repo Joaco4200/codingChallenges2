@@ -1,6 +1,7 @@
 package CodeChallenges;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class ChallengesHard {
 
@@ -33,7 +34,18 @@ public class ChallengesHard {
 //Create a solution that can format the dmv number into a plate number with correct grouping. The function input consists of string s and group length n. The output has to be upper case characters and digits. The new groups are made from right to left and connected by -. The original order of the dmv number is preserved.
 
 	 public static String licensePlate(String code, int group) {
+		  code= code.replace("-", "");
+		  code.toUpperCase();
+		  ArrayList<String> codegroups= new ArrayList<>();
 		  
+		  for(int i= code.length(); i>0; i-=group) {
+			  int inicio= Math.max(i-group, 0);
+			  codegroups.add(code.substring(inicio,i));
+		  }
+		  Collections.reverse(codegroups);
+		  
+		  String result= String.join("-", codegroups);
+		  return result;
 	  }
 
 }
