@@ -29,4 +29,11 @@ public class ChallengesHard {
 			 return finalvalue+"MB";
 		 }
 	 }
+	 
+//Create a solution that can format the dmv number into a plate number with correct grouping. The function input consists of string s and group length n. The output has to be upper case characters and digits. The new groups are made from right to left and connected by -. The original order of the dmv number is preserved.
+
+	 public static String licensePlate(String code, int group) {
+		  
+	  }
+
 }
