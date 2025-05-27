@@ -48,4 +48,9 @@ public class ChallengesHard {
 		  return result;
 	  }
 
+//Given a YouTube URL, extract the video ID and return it as a string.
+	 
+	 public static String youtubeId(String link) {
+		}
+
 }
