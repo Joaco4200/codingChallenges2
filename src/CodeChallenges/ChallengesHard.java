@@ -51,6 +51,16 @@ public class ChallengesHard {
 //Given a YouTube URL, extract the video ID and return it as a string.
 	 
 	 public static String youtubeId(String link) {
-		}
+		 StringBuilder stringBuilder= new StringBuilder();
+		 char[] newLink= link.toCharArray();
+		 for(int i= link.length()-1; i>0; i--) {
+			 stringBuilder.append(newLink[i]);
+			 if(newLink[i] =='/') {
+				 break;
+			 }
+		 }	
+		 stringBuilder.reverse();
+		 return stringBuilder.toString();
+	 }
 
 }
