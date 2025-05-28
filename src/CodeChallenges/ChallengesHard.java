@@ -52,15 +52,16 @@ public class ChallengesHard {
 	 
 	 public static String youtubeId(String link) {
 		 StringBuilder stringBuilder= new StringBuilder();
-		 char[] newLink= link.toCharArray();
-		 for(int i= link.length()-1; i>0; i--) {
-			 stringBuilder.append(newLink[i]);
-			 if(newLink[i] =='/') {
-				 break;
-			 }
-		 }	
+		 int i= link.length()-1;
+		 while(link.charAt(i) != '/' && link.charAt(i) != '=') {
+			 stringBuilder.append(link.charAt(i));
+			 i--;
+		 }
 		 stringBuilder.reverse();
 		 return stringBuilder.toString();
 	 }
 
 }
+
+
+
