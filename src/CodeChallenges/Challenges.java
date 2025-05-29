@@ -7,7 +7,16 @@ public class Challenges {
 // Create a logarithm basic function.
 	
 	public static Object logarithm(Object base, Object num) {
+		Object result= 0;
+		int baseint= (int) base;
+		int numint=(int) num;
 		
+		for(int i= 0; i<=numint ;i++) {
+			if(Math.pow(baseint, i)== numint){
+				result= i;
+			}
+		}
+		return result;
 	}
 
 //Create a function that will test if a string is a valid PIN or not via a regular expression. Exactly 4 or 6 characters. Only numeric characters (0-9). No whitespace.
