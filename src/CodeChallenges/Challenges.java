@@ -4,7 +4,12 @@ import java.util.Arrays;
 
 public class Challenges {
 
-	//
+// Create a logarithm basic function.
+	
+	public static Object logarithm(Object base, Object num) {
+		
+	}
+
 //Create a function that will test if a string is a valid PIN or not via a regular expression. Exactly 4 or 6 characters. Only numeric characters (0-9). No whitespace.
 	
 	public static boolean validate(String pin) {
