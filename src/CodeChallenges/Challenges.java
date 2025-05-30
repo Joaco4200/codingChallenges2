@@ -70,6 +70,7 @@ public class Challenges {
 		}
 		return false;
 	}
+	
 //Create a function that converts Celsius to Fahrenheit and vice versa.
 
 	public static String convert(String deg) {
