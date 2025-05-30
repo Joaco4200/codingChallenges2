@@ -1,5 +1,6 @@
 package CodeChallenges;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Challenges {
@@ -69,11 +70,28 @@ public class Challenges {
 		}
 		return false;
 	}
-	
-//Create a function that finds how many prime numbers there are, up to the given integer.
-	
-	public static int 	primeNumbers(int num) {
-		for()
+//Create a function that converts Celsius to Fahrenheit and vice versa.
+
+	public static String convert(String deg) {
+		double result= 0;
+		ArrayList<Character> nums= new ArrayList<>();
+		for(int i=0; i<deg.length(); i++) {
+			if(Character.isDigit(deg.charAt(i))) {
+				nums.add(deg.charAt(i));
+			}
+		}
+		StringBuilder sb= new StringBuilder();
+		for(char c:nums) {
+			sb.append(c);
+		}
+		int numero= Integer.parseInt(sb.toString());
+		if(deg.contains("C")) {
+			result= numero * 9.0/5 +32;
+			return result + "*F";
+		}else {
+			result= (numero-32) * 9.0/5;
+			return result + "*C";
+		}
 	}
 	
 //A number is said to be Harshad if it's exactly divisible by the sum of its digits. Create a function that determines whether a number is a Harshad or not.
